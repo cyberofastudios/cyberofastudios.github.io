@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <defs>
+    <!-- Pure Crisp White Futuristic Surface -->
+    <linearGradient id="bgWhite" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#EEF2F8" />
+    </linearGradient>
+
+    <!-- Semi-Transparent Architectural "C" Gradient -->
+    <linearGradient id="cGlass" x1="28" y1="28" x2="200" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#1E293B" stop-opacity="0.13" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.24" />
+    </linearGradient>
+
+    <!-- O: Electric Neon Blue -->
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#0051FF" />
+    </linearGradient>
+
+    <!-- F: Electric Neon Red -->
+    <linearGradient id="neonRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A54" />
+      <stop offset="100%" stop-color="#E6002B" />
+    </linearGradient>
+
+    <!-- A: Electric Neon Green -->
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1EFF6B" />
+      <stop offset="100%" stop-color="#00C838" />
+    </linearGradient>
+
+    <!-- Subtle Neon Glow Filter for O-F-A -->
+    <filter id="ofaGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- 1:1 Square Squircle Base (White) -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bgWhite)" />
+  <rect x="10" y="10" width="236" height="236" rx="54" stroke="#0F172A" stroke-opacity="0.08" stroke-width="2" />
+
+  <!-- Subtle Futuristic Tech Grid Accent Inside White Tile -->
+  <circle cx="126" cy="128" r="96" stroke="#0F172A" stroke-opacity="0.05" stroke-width="1.5" stroke-dasharray="4 6" />
+
+  <!-- GIANT TRANSLUCENT FUTURISTIC "C" MONOGRAM -->
+  <!-- Outer C Ring with Cybernetic Bevel Cut -->
+  <path d="M 192 74
+           A 88 88 0 1 0 192 182
+           L 164 158
+           A 52 52 0 1 1 164 98
+           Z"
+        fill="url(#cGlass)"
+        stroke="#0F172A"
+        stroke-opacity="0.22"
+        stroke-width="2.5"
+        stroke-linejoin="round" />
+
+  <!-- Precision Tech Accent Line Inside the Giant C -->
+  <path d="M 178 86 A 70 70 0 1 0 178 170"
+        stroke="#0F172A"
+        stroke-opacity="0.14"
+        stroke-width="2"
+        stroke-linecap="round" />
+
+  <!-- NESTED "OFA" INSIDE THE CORE OF THE "C" -->
+  <g filter="url(#ofaGlow)">
+    <!-- "O" in Electric Neon Blue (Geometric Hollow Capsule/Circle) -->
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M 103 100
+             C 87.5 100 76 112 76 128
+             C 76 144 87.5 156 103 156
+             C 118.5 156 130 144 130 128
+             C 130 112 118.5 100 103 100 Z
+             M 103 113
+             C 111.5 113 117 119.5 117 128
+             C 117 136.5 111.5 143 103 143
+             C 94.5 143 89 136.5 89 128
+             C 89 119.5 94.5 113 103 113 Z"
+          fill="url(#neonBlue)" />
+
+    <!-- "F" in Electric Neon Red (Futuristic Sliced Tech Stem & Bars) -->
+    <path d="M 138 101
+             H 176
+             L 171 113
+             H 151
+             V 123
+             H 170
+             L 166 134
+             H 151
+             V 155
+             H 138
+             V 101 Z"
+          fill="url(#neonRed)" />
+
+    <!-- "A" in Electric Neon Green (Futuristic Delta Apex with Precision Cut) -->
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M 197 100
+             L 209 100
+             L 228 155
+             H 214.5
+             L 210.5 143
+             H 195.5
+             L 191.5 155
+             H 178
+             L 197 100 Z
+             M 203 115.5
+             L 198.5 132
+             H 207.5
+             L 203 115.5 Z"
+          fill="url(#neonGreen)" />
+  </g>
+</svg>
